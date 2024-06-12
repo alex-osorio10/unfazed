@@ -1,0 +1,803 @@
+/* General Styles */
+@font-face {
+  font-family: 'Akira';
+  src: url('fonts/akira.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Akira', Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow for the entire page */
+}
+
+/* Additional CSS for the About Page */
+.about-section {
+  background-color: white;
+  color: black;
+  padding: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* SLIDERS */
+header,.banner, .footer, .products, .deals, .collection {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+section.divider {
+  text-align: center;
+  padding: 10px;
+  font-size: 35px;
+}
+
+section.divider.banner-deals {
+  padding: 5px; /* Make the Free Shipping banner smaller */
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+/* Main Header */
+.main-header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 100px;
+}
+
+.logo-container img {
+  height: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px; /* Add this line to move the nav links lower */
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+/* Product links styles */
+.products a {
+  color: black;
+  text-decoration: none;
+}
+
+.products a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* Ensure all links within the page follow the same styling if necessary */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* Style for navigation links */
+nav ul li a {
+  color: white; /* Keep the text color white */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+}
+
+/* Adjust the search form elements to have the same height */
+.search-form {
+  display: flex;
+  position: relative;
+}
+
+.search-input {
+  height: 40px; /* Adjust to the desired height */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-button {
+  height: 40px; /* Same height as the input */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-input, .search-button {
+  font-family: 'Akira', Arial, sans-serif;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.no-entries {
+  padding: 10px;
+  cursor: default;
+  background-color: #f0f0f0;
+}
+
+/* Banner Section */
+.banner {
+  height: 750px;
+  background: white url('your-image.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden; /* Remove scrollbar */
+}
+
+.movable-text {
+  position: absolute;
+  top: -1%; /* Adjust this value to move the text vertically */
+  left: 31%; /* Adjust this value to move the text horizontally */
+  transform: translateX(-50%);
+  color: black;
+  font-size: 55px;
+  padding: 20px;
+  height: auto;
+  width: auto;
+  text-align: left;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.movable-text2 {
+  position: absolute;
+  top: 8%; /* Adjust this value to move the text vertically */
+  left: 33%; /* Adjust this value to move the text horizontally */
+  transform: translateX(-50%);
+  color: white;
+  font-size: 65px;
+  padding: 20px;
+  height: auto;
+  width: auto;
+  text-align: center;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.draggable {
+  position: absolute;
+  top: 47.5%; /* Adjust this value to move the image vertically */
+  left: 80%; /* Adjust this value to move the image horizontally */
+  transform: translate(-50%, -50%);
+  height: 1050px; /* Adjust height as needed */
+  width: auto; /* Adjust width as needed */
+  z-index: 9; /* Ensure the image is behind the text */
+  cursor: move;
+  border: none; /* Remove any border */
+}
+
+/* Button Styles */
+button.shop-now, button.subscribe-now {
+  background-color: white;
+  color: black;
+  font-family: 'Akira', Arial, sans-serif;
+  border: 2px solid black; /* Added black border */
+  cursor: pointer;
+  font-size: 16px; /* Adjustable size */
+  padding: 10px 20px; /* Adjustable padding */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Added border-color transition */
+}
+
+button.shop-now:hover, button.subscribe-now:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* White border on hover */
+}
+
+
+/* Product Section */
+.products, .deals, .collection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.product {
+  width: 45%; /* Increased width */
+  max-width: 450px; /* Increased max-width */
+  text-align: center;
+  padding: 10px 5px; /* Adjusted padding to reduce left and right padding */
+  border: 5px solid #e2e1e1; /* Border color and size */
+  background-color: #e2e1e1; /* Background color */
+  border-radius: 15px; /* Rounded corners */
+  color: white;
+  box-sizing: border-box; /* Ensuring that padding and border are included in the element's total width and height */
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Horizontal Scrollable Section */
+.horizontal-scroll {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0; /* Match the padding of other sections */
+}
+
+.horizontal-scroll .scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll .product {
+  flex: 0 0 auto;
+  width: 45%; /* Increased width */
+  max-width: 450px; /* Increased max-width */
+  margin: 5px; /* Adjusted margin */
+  text-align: center;
+  padding: 10px 5px; /* Adjusted padding to reduce left and right padding */
+  border: 5px solid #e2e1e1; /* Border color and size */
+  background-color: #e2e1e1; /* Background color */
+  border-radius: 15px; /* Rounded corners */
+  color: black;
+  box-sizing: border-box; /* Ensuring that padding and border are included in the element's total width and height */
+}
+
+.horizontal-scroll .product img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  z-index: 2;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.05); /* Fix hover position issue */
+}
+
+.arrow.left {
+  left: 15px;
+}
+
+.arrow.right {
+  right: 15px;
+}
+
+/* Specific Banner Colors */
+.banner-deals {
+  background-color: green;
+  color: white;
+}
+
+.banner-hoodies {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}
+
+.banner-tees {
+  background-color: rgb(19, 201, 113);
+  color: white;
+  border: 3px solid rgb(20, 184, 113);
+}
+
+.banner-hats {
+  background-color: rgb(51, 51, 219);
+  color: white;
+  border: 3px solid rgb(40, 20, 129);
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Button Styles */
+button.shop-now, button.subscribe-button {
+  background-color: white;
+  color: black;
+  font-family: 'Akira', Arial, sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjustable size */
+  padding: 10px 20px; /* Adjustable padding */
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid white;
+}
+
+button.shop-now:hover, button.subscribe-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Social Media Button Styles */
+button.social-media-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.social-media-button img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .products .product, .deals .product, .collection .product {
+    width: 45%;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .products .product, .deals .product, .collection .product {
+    width: 100%;
+  }
+
+  .main-header, .social-media-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-header nav, .social-media-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-header nav ul {
+    justify-content: center;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scrolling-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-banner div {
+  display: inline-block;
+  animation: scrollText 20s linear infinite;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.scrolling-banner div span {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+/* About Page Specific Styles */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.about-page main {
+  flex: 1;
+}
+
+.about-page footer {
+  margin-top: auto;
+}
+
+/* Additional styles for the shop page */
+.shop-page .products-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.shop-page .product {
+  flex: 1 1 calc(25% - 20px); /* Adjust this value to control the number of products per row */
+  box-sizing: border-box;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.shop-page .product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .shop-page .product {
+    flex: 1 1 calc(33.33% - 20px); /* 3 products per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shop-page .product {
+    flex: 1 1 calc(50% - 20px); /* 2 products per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shop-page .product {
+    flex: 1 1 100%; /* 1 product per row */
+  }
+}
+
+/* Deals Page Specific Styles */
+.deals-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.deals-page main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.deals-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.left-side label, .left-side select {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.left-side select#itemColor option {
+  background-color: white;
+  color: black;
+}
+
+.left-side select#itemColor option[value="black"]:hover {
+  background-color: black;
+  color: white;
+}
+
+.left-side select#itemColor option[value="blue"]:hover {
+  background-color: blue;
+  color: white;
+}
+
+.left-side select#itemColor option[value="red"]:hover {
+  background-color: red;
+  color: white;
+}
+
+.left-side select#itemColor option[value="orange"]:hover {
+  background-color: orange;
+  color: white;
+}
+
+.left-side select#itemColor option[value="yellow"]:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.left-side select#itemColor option[value="green"]:hover {
+  background-color: green;
+  color: white;
+}
+
+.left-side select#itemColor option[value="purple"]:hover {
+  background-color: purple;
+  color: white;
+}
+
+.left-side select#itemColor option[value="pink"]:hover {
+  background-color: pink;
+  color: black;
+}
+
+.left-side select#itemColor option[value="white"]:hover {
+  background-color: white;
+  color: black;
+}
+
+.left-side select#itemColor option[value="gray"]:hover {
+  background-color: gray;
+  color: black;
+}
+
+.left-side select#itemColor option[value="teal"]:hover {
+  background-color: teal;
+  color: white;
+}
+
+.left-side select#itemColor option[value="navy"]:hover {
+  background-color: navy;
+  color: white;
+}
+
+.left-side .return-home {
+  background-color: white;
+  color: black;
+  font-family: 'Akira', Arial, sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 20px;
+  border: 4px solid black; /* Border color and size */
+}
+
+.left-side .return-home:hover {
+  background-color: black;
+  color: white;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  width: 400px; /* Increase size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#itemDetails {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1001;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#subscribeForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#subscribeForm input {
+  width: calc(100% - 22px); /* Ensures the input field fits within the modal */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Reuse button styles */
+#subscribeForm button {
+  background-color: white;
+  color: black;
+  font-family: 'Akira', Arial, sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid white;
+}
+
+#subscribeForm button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Full-Screen Overlay Styles */
+#page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it covers everything else */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#overlay-logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Hidden state for the overlay */
+#page-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
